@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ananzi </title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<style>
+
+body{
+   margin: 100px;
+   margin-top: 30px;
+   font-family: "New York Times-Roman";
+   font-size: 44px;
+   color: red;
+   height: 100%;
+   }
+
+#button_01{
+    font-size: 32px;
+}
+
+</style>
+
+<script>
+$(document).ready(function(){
+  console.log("document ready")
+    $("#button_01").on('mouseover', function(event){
+        console.log("click")
+        if ($("#title").is(":visible")) {
+          $("#title").hide();
+          }
+        else{
+           $("#title").show();
+           }
+        
+        //alert("Hello World!");
+    })
+  });
+</script>
+
+</head>
+<body>
+<center>
+  <h3 id="title">A First Ananzi Webapp - run from Visual Code </h3>
+
+  <button id="button_01"> Click</button>
+
+  <br><br>
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+
+</center> 
+
+</body>
+</html>
